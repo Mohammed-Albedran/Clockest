@@ -571,6 +571,7 @@ function addNewAlert(){
     mainAlerts.innerHTML += '<article class="alert ">'+'<div onclick="remove(this.parentElement)" class="deleteAlert "><a >&times;</a></div><header class="alertHeader "><h3>'+ alertTitle.value +'</h3>' + '<h4>'+ alertTime.value +'</h4></header><div class="content "><p>'+ alertContent.value +'</p></div></article>';
     controlingTheArray();
     activateAllThemes();
+    newAlert.style.display = "none";
 }
 function controlingTheArray(){
     var alert2 = document.querySelectorAll(".alert");
