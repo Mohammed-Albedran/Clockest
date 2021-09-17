@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <!--The menu font:font-family: 'Montserrat', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!--clock font 1:font-family: 'DM Sans', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <!--date font1:-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+    
+    <!--clock fonts-->
+    <!--font1:font-family: 'DM Sans', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <!--font2:font-family: 'Orbitron', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+     <!--font3:font-family: 'Exo 2', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <!--font4:font-family: 'Press Start 2P', cursive;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stopwatch.css">
+
+    <!--#region-->
+<!--//Information about the developer//-->
+<!-- <link rel="icon" href="https://1.bp.blogspot.com/-WoGG2lfvnhs/YDjb01risbI/AAAAAAAAALk/k2SN_R2yj7QOUme2nFHuaPg4xWQYyiN7QCLcBGAsYHQ/w381-h384/VXLogo.png"/> -->
+<meta name="description" content="Clock website , by Mohammed Mahdi Albedran"/>
+<meta name="author" content="Mohammed Mahdi Albedran"/>
+<!-- //Facebook// -->
+<meta property="og:description" content="Clock website , by Mohammed Mahdi Albedran" />
+<meta property="og:title" content="Clockest" />
+<meta property="og:type" content="website" />
+<!-- <meta property="og:image" content="https://1.bp.blogspot.com/-WoGG2lfvnhs/YDjb01risbI/AAAAAAAAALk/k2SN_R2yj7QOUme2nFHuaPg4xWQYyiN7QCLcBGAsYHQ/w381-h384/VXLogo.png" /> -->
+<!-- //End Facebook// -->
+<!-- //Twitter//-->
+<meta name="twitter:title" content="Clockest">
+<meta name="twitter:description" content="Clock website, by Mohammed Mahdi Albedran">
+<!-- <meta name="twitter:image:src" content="https://1.bp.blogspot.com/-WoGG2lfvnhs/YDjb01risbI/AAAAAAAAALk/k2SN_R2yj7QOUme2nFHuaPg4xWQYyiN7QCLcBGAsYHQ/w381-h384/VXLogo.png"> -->
+<!-- //End twitter// -->
+<!--#endregion-->
+</head>
+<body>
+    <ion-icon class="back" name="arrow-back"></ion-icon>
+    <div class="" id="timeContainer">
+        <h1 id="timeValue" class=""><bdi id="hours">00</bdi>:<bdi id="minutes">00</bdi>:<bdi id="seconds">00</bdi></h1>
+        <!-- <h3 id="dateValue" class="">12 - September - 2021</h3> -->
+        <div class="buttons">
+            <button type="button" id="play" class="play"><ion-icon class="icons" name="play"></ion-icon></button>
+            <button type="button" id="pause" class="pause"><ion-icon class="icons" name="pause"></ion-icon></button>
+            <button type="button" id="reset" class="reset"><ion-icon class="icons" name="refresh"></ion-icon></button>
+        </div>
+    </div>
+    <script src="stopwatch.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f8f8f8;
+    transition: 0.5s;
+}
+#timeContainer{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    z-index: -1;
+}
+#timeContainer h1{
+    font-size: 150px;
+    font-family: 'DM Sans', sans-serif;
+    color: #324e7b;
+}
+#timeContainer h3{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #324e7bc5;
+}
+.back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #324e7b;
+    font-size: 30px;
+    cursor: pointer;
+}
+#pause{
+    display: none;
+}
+.buttons button{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+    color: #324e7b;
+    border: 2px solid #324e7b;
+    cursor: pointer;
+    margin: 10px;
+}
+.icons{
+    font-size: 25px;
+}
+.buttons .reset{
+    background-color: #324e7b !important;
+    color: white !important;
+    border-color: #324e7b !important;
+    font-weight: 700 !important;
+}
+
+/*Theme2*/
+.bodyTheme2{
+    background-color: #222831;
+}
+.timeContainerTheme2 h1{
+    color: #ff5722 !important;
+}
+.buttons2 button{
+    background-color: #eeeeee;
+    color: #ff5722 !important;
+    border-color: #ff5722 !important;
+}
+.back2{
+    color: #ff5722 !important;
+}
+.buttons2 .reset{
+    background-color: #ff5722 !important;
+    color: #eeeeee !important;
+    border-color: #ff5722 !important;
+}
+
+/*Theme 3*/
+.bodyTheme3{
+    background-color: #303a52;
+}
+
+.timeContainerTheme3 h1{
+    color: #fc85ae !important;
+}
+.back3{
+    color: #fc85ae !important;
+}
+.buttons3 button{
+    background-color: #eeeeee;
+    color: #fc5f96 !important;
+    border-color: #fc85ae !important;
+}
+.buttons3 .reset{
+    background-color: #fc85ae !important;
+    color: #eeeeee !important;
+    border-color: #fc85ae !important;
+}
+
+/*Theme4*/
+.bodyTheme4{
+    background-color: #243d44;
+}
+
+.timeContainerTheme4 h1{
+    color: #2dea8f !important;
+}
+.back4{
+    color: #2dea8f !important;
+}
+.buttons4 button{
+    background-color: #eeeeee;
+    color: #167a8b !important;
+    border-color: #167a8b !important;
+}
+.buttons4 .reset{
+    background-color: #2dea8f !important;
+    color: #167a8b !important;
+    border-color: #2dea8f !important;
+}
+
+/*Theme5*/
+.bodyTheme5{
+    background-color: #141414;
+}
+
+.timeContainerTheme5 h1{
+    color: #e88a1a !important;
+}
+.back5{
+    color: #e88a1a !important;
+}
+.buttons5 button{
+    background-color: #eeeeee;
+    color: #e88a1a !important;
+    border-color: #e88a1a !important;
+}
+.buttons5 .reset{
+    background-color: #e88a1a !important;
+    color: #eeeeee !important;
+    border-color: #e88a1a !important;
+}
+@media only screen and (max-width:1103px) and (min-width:942px){
+    /* .h1Font4{
+        
+    } */
+    .h1Font4{
+        font-size: 80px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:941px){
+    /* .h1Font4{
+        
+    } */
+    .h1Font4{
+        font-size: 70px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:885px) and (min-width:783px){
+    #timeContainer h1{
+        font-size: 140px;
+    }
+    .clockFont4{
+        font-size: 12px;
+    }
+    .h1Font4{
+        font-size: 60px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:782px) and (min-width:738px){
+    #timeContainer h1{
+        font-size: 130px;
+    }
+    .clockFont4{
+        font-size: 12px;
+    }
+    .h1Font4{
+        font-size: 50px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:739px) and (min-width:661px){
+    #timeContainer h1{
+        font-size: 110px;
+    }
+    .clockFont4{
+        font-size: 12px;
+    }
+    .h1Font4{
+        font-size: 50px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:660px) and (min-width:533px){
+    #timeContainer h1{
+        font-size: 90px;
+    }
+    #timeContainer h3{
+        font-size: 15px;
+    }
+    .clockFont4{
+        font-size: 5px;
+    }
+    .h1Font4{
+        font-size: 40px !important;
+    }
+    .clockFont2{
+        font-size: 12px !important;
+    }
+    .h1Font2{
+        font-size: 60px !important;
+    }
+}
+@media only screen and (max-width:532px) and (min-width:466px){
+    #timeContainer h1{
+        font-size: 90px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .clockFont4{
+        font-size: 10px !important;
+    }
+    .h1Font4{
+        font-size: 40px !important;
+    }
+    .clockFont2{
+        font-size: 11px !important;
+    }
+    .h1Font2{
+        font-size: 50px !important;
+    }
+}
+@media only screen and (max-width:465px) and (min-width:446px){
+    #timeContainer h1{
+        font-size: 85px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .clockFont4{
+        font-size: 10px !important;
+    }
+    .h1Font4{
+        font-size: 35px !important;
+    }
+    .clockFont2{
+        font-size: 11px !important;
+    }
+    .h1Font2{
+        font-size: 50px !important;
+    }
+}
+@media only screen and (max-width:445px) and (min-width:402px){
+    #timeContainer h1{
+        font-size: 85px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .clockFont4{
+        font-size: 10px !important;
+    }
+    .h1Font4{
+        font-size: 35px !important;
+    }
+    .clockFont2{
+        font-size: 11px !important;
+    }
+    .h1Font2{
+        font-size: 50px !important;
+    }
+    .settings{
+        width: 390px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+}
+@media only screen and (max-width:401px) and (min-width:366px){
+    #timeContainer h1{
+        font-size: 75px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .buttons button{
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .buttons .icons{
+        font-size: 20px !important;
+    }
+    .clockFont4{
+        font-size: 9px !important;
+    }
+    .h1Font4{
+        font-size: 30px !important;
+    }
+    .clockFont2{
+        font-size: 10px !important;
+    }
+    .h1Font2{
+        font-size: 40px !important;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .settings{
+        width: 340px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+    .clockSystemButton{
+        padding: 5px 10px;
+        font-size: small;
+    }
+    .settings article h3{
+        font-size: medium;
+    }
+    .settings .icons{
+        font-size: 20px;
+    }
+    .fontButton{
+        font-size: small;
+    }
+    .fontB4{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width:365px) and (min-width:341px){
+    #timeContainer h1{
+        font-size: 70px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .buttons button{
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .buttons .icons{
+        font-size: 20px !important;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .clockFont4{
+        font-size: 8px !important;
+    }
+    .h1Font4{
+        font-size: 25px !important;
+    }
+    .clockFont2{
+        font-size: 10px !important;
+    }
+    .h1Font2{
+        font-size: 40px !important;
+    }
+    .settings{
+        width: 330px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+    .clockSystemButton{
+        padding: 5px 10px;
+        font-size: small;
+    }
+    .settings article h3{
+        font-size: medium;
+    }
+    .settings .icons{
+        font-size: 20px;
+    }
+    .fontButton{
+        font-size: small;
+    }
+    .fontB4{
+        font-size: 10px;
+    }
+    .about{
+        width: 320px;
+    }
+}
+@media only screen and (max-width:340px){
+    #timeContainer h1{
+        font-size: 60px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .buttons button{
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .buttons .icons{
+        font-size: 20px !important;
+    }
+    .clockFont4{
+        font-size: 8px !important;
+    }
+    .h1Font4{
+        font-size: 25px !important;
+    }
+    .clockFont2{
+        font-size: 10px !important;
+    }
+    .h1Font2{
+        font-size: 40px !important;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .settings{
+        width: 310px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+    .clockSystemButton{
+        padding: 5px 10px;
+        font-size: smaller;
+        margin-left: 3px;
+    }
+    .settings article h3{
+        font-size: smaller;
+    }
+    .settings .icons{
+        font-size: 20px;
+    }
+    .fontButton{
+        font-size: smaller;
+    }
+    .fontB4{
+        font-size: 10px;
+    }
+    .alerts{
+        width: 310px;
+    }
+    .about{
+        width: 300px;
+    }
+}

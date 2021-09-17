@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clockest</title>
+    <link rel="stylesheet" href="style.css">
+        <!--The menu font:font-family: 'Montserrat', sans-serif;-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<!--clock font 1:font-family: 'DM Sans', sans-serif;-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+<!--date font1:-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+
+<!--clock fonts-->
+<!--font1:font-family: 'DM Sans', sans-serif;-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+<!--font2:font-family: 'Orbitron', sans-serif;-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+ <!--font3:font-family: 'Exo 2', sans-serif;-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+<!--font4:font-family: 'Press Start 2P', cursive;-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<!--#region-->
+<!--//Information about the developer//-->
+<link rel="icon" href="icon.png"/>
+<meta name="description" content="Clock website , by Mohammed Mahdi Albedran"/>
+  <meta name="author" content="Mohammed Mahdi Albedran"/>
+  <!-- //Facebook// -->
+  <meta property="og:description" content="Clock website , by Mohammed Mahdi Albedran" />
+  <meta property="og:title" content="Clockest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="icon.png" />
+  <!-- //End Facebook// -->
+  <!-- //Twitter//-->
+  <meta name="twitter:title" content="Clockest">
+  <meta name="twitter:description" content="Clock website, by Mohammed Mahdi Albedran">
+  <meta name="twitter:image:src" content="icon.png">
+  <!-- //End twitter// -->
+  <!--#endregion-->
+</head>
+<body class="">
+    <ion-icon class="options " name="ellipsis-vertical"></ion-icon>
+    <div class="menu ">
+        <ul>
+            <li class="settingsButton" style="margin-top: 5px;"><ion-icon class="icons" name="settings"></ion-icon><h3>Settings</h3><h5>Hours system&Themes...</h5></li>
+            <li onclick="openTimerTab();" class="timerButton"><ion-icon class="icons" name="timer"></ion-icon><h3>Timer</h3><h5>Stopwatch</h5></li>
+            <li class="alertsButton"><ion-icon class="icons" name="notifications"></ion-icon><h3>Alerts</h3><h5>Set alert</h5></li>
+            <li class="aboutButton"><ion-icon class="icons" name="help-circle"></ion-icon><h3>About</h3><h5>About the developer</h5></li>
+            <li class="moreButton"><ion-icon class="icons" name="globe"></ion-icon><h3>More websites</h3><h5>ToDoList & more</h5></li>
+        </ul>
+    </div>
+
+    <div class="settings ">
+        <a class="settingsExit">&times;</a>
+        <h2 class="settingsTitle"><ion-icon class="icons " name="settings-outline"></ion-icon>Settings</h2>
+        <article id="themes">
+            <h3><ion-icon class="icons" name="color-palette-outline"></ion-icon>Themes</h3>
+            <ul>
+                <li><button id="themeChooser" class="theme1"></button></li>
+                <li><button id="themeChooser" class="theme2"></button></li>
+                <li><button id="themeChooser" class="theme3"></button></li>
+                <li><button id="themeChooser" class="theme4"></button></li>
+                <li><button id="themeChooser" class="theme5"></button></li>
+            </ul>
+        </article><hr>
+        <article id="fonts">
+            <h3><ion-icon class="icons" name="text-outline"></ion-icon>Fonts</h3>
+            <ul>
+                <li><button type="button" class="fontButton fontB1" style="font-weight: 500;font-family: 'DM Sans', sans-serif;">12:35</button></li>
+                <li><button type="button" class="fontButton fontB2" style="font-weight: 500;font-family: 'Orbitron', sans-serif;">12:35</button></li>
+                <li><button type="button" class="fontButton fontB3" style="font-weight: 500;font-family: 'Exo 2', sans-serif;">12:35</button></li>
+                <li><button type="button" class="fontButton fontB4" style="font-family: 'Press Start 2P', cursive;padding: 9px 5px;">12:35</button></li>
+
+            </ul>
+        </article><hr>
+        <article id="clockSystem">
+            <h3><ion-icon class="icons" name="time-outline"></ion-icon>Clock System</h3>
+            <ul>
+                <li><button type="button" class="clockSystemButton hour24">24 Hours</button></li>
+                <li><button type="button" class="clockSystemButton hour12">12 Hours</button></li>
+            </ul>
+        </article><hr>
+    </div>
+    <div class="alerts ">
+        <a class="closeAlerts">&times;</a>
+        <h2><ion-icon class="icons" name="notifications-outline"></ion-icon>Alerts<ion-icon class="addAlert addAlertTheme2" title="add alert" name="add-circle-outline"></ion-icon></h2>
+        <div class="newAlert ">
+            <h4>The title:</h4>
+            <input type="text" class="alertTitle" maxlength="15" placeholder="Title of the task">
+            <h4>The time:</h4>
+            <input type="time" class="alertTime" placeholder="The time">
+            <h4>The task:</h4>
+            <input type="text" class="alertContent" maxlength="80" placeholder="The task"><br>
+            <button type="button" class="addAlertButton">Add alert</button>
+            <a class="closeAddAlert">&times;</a>
+        </div>
+        <main class="mainAlerts">
+            <!-- <article id="t" class="alert ">
+                <div onclick="remove(this.parentElement)" class="deleteAlert ">
+                    <a >&times;</a>
+                </div>
+                <header class="alertHeader ">
+                    <h3>Title</h3>
+                    <h4>12:35</h4>
+                </header>
+                <div class="content ">
+                    <p>Some random tasks right here or anything</p>
+                </div>
+            </article>
+            <article id="t" class="alert ">
+                <div onclick="remove(this.parentElement)" class="deleteAlert ">
+                    <a >&times;</a>
+                </div>
+                <header class="alertHeader ">
+                    <h3>Title</h3>
+                    <h4>12:35</h4>
+                </header>
+                <div class="content ">
+                    <p>Some random tasks right here or anything</p>
+                </div>
+            </article> -->
+
+            <div class="emptyAlerts"><ion-icon class="emptyIcon" name="file-tray-outline"></ion-icon><br><h3>You don't have any alerts</h3></div>
+        </main>
+    </div>
+    <div class="about ">
+        <a class="aboutExit">&times;</a>
+        <h2><ion-icon class="icons" name="help-circle-outline"></ion-icon>About</h2>
+        <article class="developer">
+            <h3><ion-icon class="icons" name="person-outline"></ion-icon>The developer:<a href="mailto:stonegamesstation2@gmail.com"><ion-icon style="float: right;font-size: 30px;margin-right: 5px;padding: 5px;border-radius: 50%;border: 1px solid gray;cursor: pointer;" class="icons emailIcon" name="mail-outline"></ion-icon></a></h3>
+            <h5>Mohammed Al-Bedran </h5>
+        </article><hr>
+        <article class="webVersion">
+            <h3><ion-icon class="icons" name="globe-outline"></ion-icon>Website version:</h3>
+            <h5>0.2.0</h5>
+        </article><hr>
+        <p style="float: right;font-weight: bold;font-family: 'Montserrat', sans-serif;">© 2021</p>
+    </div> 
+    <div class="alarmContainer"></div>
+    <div class="" id="timeContainer">
+        <h1 id="timeValue" class="">14:23:42</h1>
+        <h3 id="dateValue" class="">12 - September - 2021</h3>
+    </div>
+    <!-- <article id="t" class="alert alarm">
+        <div onclick="remove(this.parentElement)" class="deleteAlert ">
+            <a >&times;</a>
+        </div>
+        <header class="alertHeader ">
+            <h3>Title</h3>
+            <h4>12:35</h4>
+        </header>
+        <div class="content ">
+            <p>Some random tasks right here or anything</p>
+        </div>
+    </article> -->
+    <audio src="sound.mp3" id="sound"></audio>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,1245 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f8f8f8;
+    transition: 0.5s;
+}
+#timeContainer{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    z-index: -1;
+}
+#timeContainer h1{
+    font-size: 150px;
+    font-family: 'DM Sans', sans-serif;
+    color: #324e7b;
+}
+#timeContainer h3{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #324e7bc5;
+}
+.options{
+    font-size: 40px;
+    margin: 15px;
+    margin: 20px;
+    cursor: pointer;
+    color: #324e7b;
+}
+.menu{
+    width: 230px;
+    height: 334px;
+    background-color: #f1f1f1;
+    margin-left: 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: none;
+    animation-name: menuAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+@keyframes menuAnimation{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 334px;
+    }
+}
+.menu ul{
+    list-style: none;
+}
+.menu li{
+    /* background-color: red; */
+    padding: 12px;
+    cursor: pointer;
+    
+}
+.menu li h3,h5{
+    font-family: 'Montserrat', sans-serif;
+    color: #324e7b;
+}
+.menu li h5{
+    color: #324e7bce;
+}
+.icons{
+    float: left;
+    margin-top: 3px;
+    margin-right: 3px;
+    font-size: 25px;
+    color: #324e7b;
+}
+.settings{
+    width: 420px;
+    height: 290px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: #f1f1f1;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    animation-name: alertsAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+/* @keyframes settingsAnimation{
+    0%{
+        top: 40%;
+    }
+    100%{
+        top: 50%;
+    }
+} */
+.settings a{
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 35px;
+    margin-left: 50px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+.settings h2{
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #324e7b;
+}
+.settings article h3{
+    color: #324e7b;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 25px;
+    margin-left: 15px;
+    float: left;
+    margin-bottom: 15px;
+}
+.settings article h3 ion-icon{
+    margin-top: 0;
+}
+.settings ul{
+    margin-top: 20px;
+    margin-right: 15px;
+    list-style: none;
+    float: right;
+}
+.settings li{
+    display: inline;
+}
+hr{
+    clear: both;
+}
+#themeChooser{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0.5px solid gray;
+    position: relative;
+    cursor: pointer;
+}
+#themeChooser::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+/*#region*/
+.theme1{
+    background-color: #f1f1f1;
+}
+.theme1::after{
+    background-color: #324e7b;
+}
+.theme2{
+    background-color: #222831;
+}
+.theme2::after{
+    background-color: #ff5722;
+}
+.theme3{
+    background-color: #303a52;
+}
+.theme3::after{
+    background-color: #fc85ae;
+}
+.theme4{
+    background-color: #243d44;
+}
+.theme4::after{
+    background-color: #2dea8f;
+}
+.theme5{
+    background-color: #141414;
+}
+.theme5::after{
+    background-color: #e88a1a;
+}
+/*#endregion*/
+
+.fontButton{
+    padding: 5px 6px;
+    font-size: medium;
+    border: 1px solid #213452;
+    border-radius: 3px;
+    background-color: white;
+    color: #324e7b;
+    cursor: pointer;
+}
+.languageButton{
+    padding: 5px 13px;
+    font-size: medium;
+    border: 1px solid #213452;
+    border-radius: 3px;
+    background-color: white;
+    color: #324e7b;
+    cursor: pointer;
+    margin-left: 7px;
+}
+.clockSystemButton{
+    padding: 5px 13px;
+    font-size: medium;
+    border: 1px solid #213452;
+    border-radius: 3px;
+    background-color: white;
+    color: #324e7b;
+    cursor: pointer;
+    margin-left: 7px;
+}
+.alerts{
+    width: 330px;
+    height: 410px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: #f1f1f1;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    animation-name: alertsAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+@keyframes alertsAnimation{
+    0%{
+        opacity: 0;
+        top: 40%;
+    }
+    100%{
+        opacity: 1;
+        top: 50%;
+    }
+}
+.alerts h2{
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #324e7b;
+}
+.mainAlerts{
+    margin-top: 10px;
+    overflow: auto;
+    height: 330px;
+}
+.newAlert{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 250px;
+    height: 250px;
+    background-color: #f8f8f8;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    overflow: hidden;
+    display: none;
+    animation-name: newAlertAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+@keyframes newAlertAnimation{
+    0%{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        width: 250px;
+        height: 250px;
+        opacity: 1;
+    }
+}
+.newAlert input{
+    padding: 7px;
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    outline: none;
+    margin: 10px;
+}
+.newAlert h4{
+    float: left;
+    margin-left: 20px;
+    color: #324e7b;
+    font-family: 'Montserrat', sans-serif;
+}
+/* .newAlert input:first-child{
+    margin-top: 30px;
+} */
+.closeAddAlert{
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+.newAlert button{
+    padding: 7px 17px;
+    background-color: #324e7b;
+    border: none;
+    color: #f8f8f8;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.alert{
+    width: 300px;
+    height: 90px;
+    margin: 5px;
+    margin: auto;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.alertHeader{
+    width: 90%;
+    height: 25px;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.alertHeader h3{
+    padding: 3px;
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+}
+.alertHeader h4{
+    float: right;
+    padding: 5px;
+    margin-right: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+.alertHeader a{
+    /* position: absolute;
+    top: 2px;
+    right: 15px; */
+    float: right;
+    font-size: 25px;
+    /* margin-left: 50px; */
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.content{
+    width: 87%;
+    padding: 5px;
+    overflow: hidden;
+}
+.content p{
+    width: 90%;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.deleteAlert{
+    width: 9%;
+    float: right;
+    height: 90px;
+    background-color: #324e7b;
+    position: relative;
+}
+.deleteAlert a{
+    position: absolute;
+    /* top: 50%;
+    right: 50%; */
+    margin-top: 30px;
+    font-size: 25px;
+    margin-left: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.addAlert{
+    font-size: 35px;
+    float: right;
+    margin-right: 35px;
+    cursor: pointer;
+}
+.closeAlerts{
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 35px;
+    margin-left: 50px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+.emptyAlerts{
+    /* background-color: red; */
+    text-align: center;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 90px;
+}
+.emptyAlerts .emptyIcon{
+    font-size: 55px;
+}
+.about{
+    width: 350px;
+    height: 265px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    animation-name: alertsAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    transition: 0.3s;
+}
+.about h2{
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #324e7b;
+}
+.about article h3{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    margin-left: 15px;
+    color: #324e7b;
+    /* margin-bottom: 15px; */
+}
+.about article h3 ion-icon{
+    margin-top: 0;
+}
+.about article h5{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    color: #233758;
+}
+.about a:first-child{
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 35px;
+    margin-left: 50px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+/*Theme 2*/
+/*#region*/
+.bodyTheme2{
+    background-color: #222831;
+}
+.newAlertTheme2{
+    background-color: #2e3642;
+    border: none;
+}
+.newAlertTheme2 input{
+    background-color: #1b2129;
+    border: 1px solid gray;
+    color: #f7f6f6;
+}
+.newAlertTheme2 button{
+    background-color: #ff5722;
+    color: white;
+}
+.newAlertTheme2 h4{
+    color: #f7f6f6;
+}
+.timeContainerTheme2 h1{
+    color: #ff5722 !important;
+}
+.timeContainerTheme2 h3{
+    color: #ff5622d3 !important;
+}
+.optionsTheme2{
+    color: #ff5722;
+}
+.menuTheme2{
+    background-color: #1b2129;
+    box-shadow: none;
+}
+.menuTheme2 li:hover{
+    background-color: #14181f;
+}
+.menuTheme2 li h3,h5{
+    font-family: 'Montserrat', sans-serif;
+    color: #f7f6f6;
+}
+.menuTheme2 li h5{
+    color: #c0c0c0;
+}
+.iconsTheme2{
+    color: #ff5722;
+}
+.settingsTheme2{
+    background-color: #1b2129;
+    box-shadow: none;
+}
+.settingsTheme2 a{
+    color: #ff5722;
+}
+.settingsTheme2 h2{
+    color: #c0c0c0;
+}
+.settingsTheme2 article h3{
+    color: #c0c0c0;
+}
+.lang2,.font2,.clockSystemButton2{
+    background-color: #222831;
+    color: #ff5722;
+    border: 1px solid #ff5722;
+}
+.alertsTheme2{
+    background-color: #1b2129;
+}
+.alertsTheme2 h2{
+    color: #c0c0c0;
+}
+.alertsTheme2 a{
+    color: #ff5722;
+}
+.alertTheme2{
+    background-color: #222831;
+    color: #d8d8d8;
+}
+.alertTheme2 .alertHeader{
+    background-color: #333c49;
+}
+.alertTheme2 .alertHeader a{
+    color: #ff5722 !important;
+}
+.alertTheme2 .deleteAlert{
+    background-color: #ff5722;
+}
+.alertTheme2 .deleteAlert a{
+    color: white;
+}
+
+.aboutTheme2{
+    background-color: #1b2129;
+}
+.aboutTheme2 h2{
+    color: #c0c0c0;
+}
+.aboutTheme2 article h3{
+    color: #c0c0c0;
+}
+.aboutTheme2 a{
+    color: #ff5722;
+}
+/*#endregion*/
+
+/*Theme 3*/
+/*#region*/
+.bodyTheme3{
+    background-color: #303a52;
+}
+.newAlertTheme3{
+    background-color: #303a52;
+    border: none;
+}
+.newAlertTheme3 input{
+    background-color: #3b4865;
+    border: 1px solid gray;
+    color: #f7f6f6;
+}
+.newAlertTheme3 h4{
+    color: #f7f6f6;
+}
+.newAlertTheme3 button{
+    background-color: #fc85ae;
+    color: white;
+}
+.timeContainerTheme3 h1{
+    color: #fc85ae !important;
+}
+.timeContainerTheme3 h3{
+    color: #fc85ae !important;
+}
+.optionsTheme3{
+    color: #fc85ae;
+}
+.menuTheme3{
+    background-color: #3b4865;
+    box-shadow: none;
+}
+.menuTheme3 li:hover{
+    background-color: #2f3a52;
+}
+.menuTheme3 li h3,h5{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+.menuTheme3 li h5{
+    color: #c0c0c0;
+}
+.iconsTheme3{
+    color: #fc85ae;
+}
+.settingsTheme3{
+    background-color: #3b4865;
+    box-shadow: none;
+}
+.settingsTheme3 a{
+    color: #fc85ae;
+}
+.settingsTheme3 h2{
+    color: #ffffff;
+}
+.settingsTheme3 article h3{
+    color: #ffffff;
+}
+.lang3,.font3,.clockSystemButton3{
+    background-color: #303a52;
+    color: #fc85ae;
+    border: 1px solid #fc85ae;
+}
+.alertsTheme3{
+    background-color: #3b4865;
+}
+.alertsTheme3 h2{
+    color: #ffffff;
+}
+.alertsTheme3 a{
+    color: #fc85ae;
+}
+.alertTheme3{
+    background-color: #303a52;
+    color: #ffffff;
+}
+.alertTheme3 .alertHeader{
+    background-color: #465366;
+}
+.alertTheme3 .alertHeader a{
+    color: #fc85ae !important;
+}
+.alertTheme3 .deleteAlert{
+    background-color: #fc85ae;
+}
+.alertTheme3 .deleteAlert a{
+    color: white;
+}
+
+.aboutTheme3{
+    background-color: #3b4865;
+}
+.aboutTheme3 h2{
+    color: #ffffff;
+}
+.aboutTheme3 article h3{
+    color: #ffffff;
+}
+.aboutTheme3 h5{
+    color: #dbdbdb !important;
+}
+.aboutTheme3 p{
+    color: #b4b4b4;
+    margin-right: 3px;
+}
+.aboutTheme3 a{
+    color: #fc85ae;
+}
+/*#endregion*/
+
+/*Theme 4*/
+/*#region*/
+.bodyTheme4{
+    background-color: #243d44;
+}
+.newAlertTheme4{
+    background-color: #243d44;
+    border: none;
+}
+.newAlertTheme4 input{
+    background-color: #2f4e56;
+    border: 1px solid gray;
+    color: #f7f6f6;
+}
+.newAlertTheme4 h4{
+    color: #f7f6f6;
+}
+.newAlertTheme4 button{
+    background-color: #2dea8f;
+    color: #167a8b;
+}
+.timeContainerTheme4 h1{
+    color: #2dea8f !important;
+}
+.timeContainerTheme4 h3{
+    color: #2dea8f !important;
+}
+.optionsTheme4{
+    color: #2dea8f;
+}
+.menuTheme4{
+    background-color: #2f4e56;
+    box-shadow: none;
+}
+.menuTheme4 li:hover{
+    background-color: #22383d;
+}
+.menuTheme4 li h3,h5{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+.menuTheme4 li h5{
+    color: #c0c0c0;
+}
+.iconsTheme4{
+    color: #2dea8f;
+}
+.settingsTheme4{
+    background-color: #2f4e56;
+    box-shadow: none;
+}
+.settingsTheme4 a{
+    color: #2dea8f !important;
+}
+.settingsTheme4 h2{
+    color: #ffffff;
+}
+.settingsTheme4 article h3{
+    color: #ffffff;
+}
+.lang4,.font4,.clockSystemButton4{
+    background-color: #243d44;
+    color: #2dea8f;
+    border: 1px solid #2dea8f;
+}
+.alertsTheme4{
+    background-color: #2f4e56;
+}
+.alertsTheme4 h2{
+    color: #ffffff;
+}
+.alertsTheme4 a{
+    color: #2dea8f;
+}
+.alertTheme4{
+    background-color: #243d44;
+    color: #ffffff;
+}
+
+
+.alertTheme4 .alertHeader{
+    background-color: #3b6774;
+}
+.alertTheme4 .alertHeader a{
+    color: #2dea8f !important;
+}
+.alertTheme4 .deleteAlert{
+    background-color: #2dea8f;
+}
+.alertTheme4 .deleteAlert a{
+    color: white;
+}
+
+
+.aboutTheme4{
+    background-color: #2f4e56;
+}
+.aboutTheme4 h2{
+    color: #ffffff;
+}
+.aboutTheme4 article h3{
+    color: #ffffff;
+}
+.aboutTheme4 h5{
+    color: #dbdbdb !important;
+}
+.aboutTheme4 p{
+    color: #b4b4b4;
+    margin-right: 3px;
+}
+.aboutTheme4 a{
+    color: #2dea8f !important;
+}
+/*#endregion*/
+
+/*Theme 5*/
+/*#region*/
+.bodyTheme5{
+    background-color: #141414;
+}
+.newAlertTheme5{
+    background-color: #141414;
+    border: none;
+}
+.newAlertTheme5 input{
+    background-color: #222222;
+    border: 1px solid gray;
+    color: #f7f6f6;
+}
+.newAlertTheme5 h4{
+    color: #f7f6f6;
+}
+.newAlertTheme5 button{
+    background-color: #e88a1a;
+    color: #ffffff;
+}
+.timeContainerTheme5 h1{
+    color: #e88a1a !important;
+}
+.timeContainerTheme5 h3{
+    color: #e88b1ab9 !important;
+}
+.optionsTheme5{
+    color: #e88a1a;
+}
+.menuTheme5{
+    background-color: #222222;
+    box-shadow: none;
+}
+.menuTheme5 li:hover{
+    background-color: #1d1d1d;
+}
+.menuTheme5 li h3,h5{
+    font-family: 'Montserrat', sans-serif;
+    color: #d9d9d9;
+}
+.menuTheme5 li h5{
+    color: #cacaca;
+}
+.iconsTheme5{
+    color: #e88a1a;
+}
+.settingsTheme5{
+    background-color: #222222;
+    box-shadow: none;
+}
+.settingsTheme5 a{
+    color: #e88a1a;
+}
+.settingsTheme5 h2{
+    color: #d9d9d9;
+}
+.settingsTheme5 article h3{
+    color: #d9d9d9;
+}
+.lang5,.font5,.clockSystemButton5{
+    background-color: #141414;
+    color: #e88a1a;
+    border: 1px solid #e88a1a;
+}
+.alertsTheme5{
+    background-color: #222222;
+}
+.alertsTheme5 h2{
+    color: #d9d9d9;
+}
+.alertsTheme5 a{
+    color: #e88a1a;
+    color: rgb(241, 196, 15);
+}
+.alertTheme5{
+    background-color: #141414;
+    color: #d9d9d9;
+}
+
+.alertTheme5 .alertHeader{
+    background-color: #333333;
+}
+.alertTheme5 .alertHeader a{
+    color: #e88a1a !important;
+}
+.alertTheme5 .deleteAlert{
+    background-color: #e88a1a;
+}
+.alertTheme5 .deleteAlert a{
+    color: white;
+}
+
+.aboutTheme5{
+    background-color: #222222;
+}
+.aboutTheme5 h2{
+    color: #d9d9d9;
+}
+.aboutTheme5 article h3{
+    color: #d9d9d9;
+}
+.aboutTheme5 h5{
+    color: #dbdbdb !important;
+}
+.aboutTheme5 p{
+    color: #b4b4b4;
+    margin-right: 3px;
+}
+.aboutTheme5 a{
+    color: #e88a1a !important;
+}
+/*#endregion*/
+
+.clockFont2{
+    font-family: 'Orbitron', sans-serif !important;
+}
+.clockFont3{
+    font-family: 'Exo 2', sans-serif !important;
+}
+.clockFont4{
+    font-family: 'Press Start 2P', cursive !important;
+}
+.h1Font4{
+    font-size: 6rem !important;
+}
+.fontB4{
+    font-size: small;
+}
+
+/*the alarm*/
+/* .alarm{
+} */
+.alarmContainer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 330px;
+    height: 100px;
+}
+@media only screen and (max-width:1103px) and (min-width:942px){
+    /* .h1Font4{
+        
+    } */
+    .h1Font4{
+        font-size: 80px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:941px){
+    /* .h1Font4{
+        
+    } */
+    .h1Font4{
+        font-size: 70px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:885px) and (min-width:783px){
+    #timeContainer h1{
+        font-size: 140px;
+    }
+    .clockFont4{
+        font-size: 12px;
+    }
+    .h1Font4{
+        font-size: 60px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:782px) and (min-width:738px){
+    #timeContainer h1{
+        font-size: 130px;
+    }
+    .clockFont4{
+        font-size: 12px;
+    }
+    .h1Font4{
+        font-size: 50px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:739px) and (min-width:661px){
+    #timeContainer h1{
+        font-size: 110px;
+    }
+    .clockFont4{
+        font-size: 12px;
+    }
+    .h1Font4{
+        font-size: 50px !important;
+    }
+    .h1Font2{
+        font-size: 80px !important;
+    }
+}
+@media only screen and (max-width:660px) and (min-width:533px){
+    #timeContainer h1{
+        font-size: 90px;
+    }
+    #timeContainer h3{
+        font-size: 15px;
+    }
+    .clockFont4{
+        font-size: 5px;
+    }
+    .h1Font4{
+        font-size: 40px !important;
+    }
+    .clockFont2{
+        font-size: 12px !important;
+    }
+    .h1Font2{
+        font-size: 60px !important;
+    }
+}
+@media only screen and (max-width:532px) and (min-width:466px){
+    #timeContainer h1{
+        font-size: 75px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .clockFont4{
+        font-size: 10px !important;
+    }
+    .h1Font4{
+        font-size: 40px !important;
+    }
+    .clockFont2{
+        font-size: 11px !important;
+    }
+    .h1Font2{
+        font-size: 50px !important;
+    }
+}
+@media only screen and (max-width:465px) and (min-width:446px){
+    #timeContainer h1{
+        font-size: 60px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .clockFont4{
+        font-size: 10px !important;
+    }
+    .h1Font4{
+        font-size: 35px !important;
+    }
+    .clockFont2{
+        font-size: 11px !important;
+    }
+    .h1Font2{
+        font-size: 50px !important;
+    }
+}
+@media only screen and (max-width:445px) and (min-width:402px){
+    #timeContainer h1{
+        font-size: 60px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .clockFont4{
+        font-size: 10px !important;
+    }
+    .h1Font4{
+        font-size: 35px !important;
+    }
+    .clockFont2{
+        font-size: 11px !important;
+    }
+    .h1Font2{
+        font-size: 50px !important;
+    }
+    .settings{
+        width: 390px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+}
+@media only screen and (max-width:401px) and (min-width:366px){
+    #timeContainer h1{
+        font-size: 60px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .clockFont4{
+        font-size: 9px !important;
+    }
+    .h1Font4{
+        font-size: 30px !important;
+    }
+    .clockFont2{
+        font-size: 10px !important;
+    }
+    .h1Font2{
+        font-size: 40px !important;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .settings{
+        width: 340px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+    .clockSystemButton{
+        padding: 5px 10px;
+        font-size: small;
+    }
+    .settings article h3{
+        font-size: medium;
+    }
+    .settings .icons{
+        font-size: 20px;
+    }
+    .fontButton{
+        font-size: small;
+    }
+    .fontB4{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width:365px) and (min-width:341px){
+    #timeContainer h1{
+        font-size: 50px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .clockFont4{
+        font-size: 8px !important;
+    }
+    .h1Font4{
+        font-size: 25px !important;
+    }
+    .clockFont2{
+        font-size: 10px !important;
+    }
+    .h1Font2{
+        font-size: 40px !important;
+    }
+    .settings{
+        width: 330px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+    .clockSystemButton{
+        padding: 5px 10px;
+        font-size: small;
+    }
+    .settings article h3{
+        font-size: medium;
+    }
+    .settings .icons{
+        font-size: 20px;
+    }
+    .fontButton{
+        font-size: small;
+    }
+    .fontB4{
+        font-size: 10px;
+    }
+    .about{
+        width: 320px;
+    }
+}
+@media only screen and (max-width:340px){
+    #timeContainer h1{
+        font-size: 50px;
+    }
+    #timeContainer h3{
+        font-size: 12px;
+    }
+    .clockFont4{
+        font-size: 8px !important;
+    }
+    .h1Font4{
+        font-size: 25px !important;
+    }
+    .clockFont2{
+        font-size: 10px !important;
+    }
+    .h1Font2{
+        font-size: 40px !important;
+    }
+    .options{
+        font-size: 30px;
+    }
+    .settings{
+        width: 310px;
+        height: 290px;
+    }
+    .settings h2{
+        padding: 10px;
+    }
+    .clockSystemButton{
+        padding: 5px 10px;
+        font-size: smaller;
+        margin-left: 3px;
+    }
+    .settings article h3{
+        font-size: smaller;
+    }
+    .settings .icons{
+        font-size: 20px;
+    }
+    .fontButton{
+        font-size: smaller;
+    }
+    .fontB4{
+        font-size: 10px;
+    }
+    .alerts{
+        width: 310px;
+    }
+    .about{
+        width: 300px;
+    }
+}
